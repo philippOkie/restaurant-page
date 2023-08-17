@@ -1,0 +1,138 @@
+@import url(./reset.scss);
+@import url('https://fonts.googleapis.com/css2?family=Barriecito&display=swap');
+
+$base-color: #A2D2FF;
+$card-base-color: #FFAFCC;
+
+body {
+    font-family: 'Barriecito', cursive;
+    background: white;
+    color: $card-base-color;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;   
+}
+
+header {
+    padding-top: 0.3em;
+    font-size: 6em;
+    width: 80%;
+
+    display: flex;
+    align-self: center;
+    justify-content: space-between;
+
+    button {
+        background-color: transparent;
+        color: $card-base-color;
+        font-size: 0.4em;
+        margin-left: 3em;
+        transition: 0.5s;
+    }
+    button:hover {
+        font-size: 0.6em;
+    }
+    button:active {
+        color: white;
+        font-size: 0.4em;
+    }
+}
+
+.pages {
+    display: flex;
+    justify-content: center;
+}
+
+
+.homePage {
+    height: 55em;
+    width: 80%;
+    margin-top: 2.5em;
+    animation: append-animate .4s linear;
+    
+    .containerHomePage {
+        color: $card-base-color;
+        height: 100%;
+        font-size: 2em;
+        display: grid;
+        gap: 1em;
+        grid-template-areas: 
+        "aboutus aboutus hours"
+        "aboutus aboutus locations";
+
+        .abus {
+            border-radius: 100px;
+            grid-area: aboutus;
+        }
+
+        .hours {
+            grid-area: hours;
+            padding: 1em;
+        }
+
+        .locations {
+            grid-area: locations;
+            padding: 1em;
+        }
+    }
+}
+
+.menuPage {
+    height: 55em;
+    width: 80%;
+    margin-top: 2.5em;
+    color: $card-base-color;
+    text-wrap: balance;
+    text-align: start;
+    font-weight: 700;
+    font-size: 2em;   
+    animation: append-animate .4s linear;
+
+    .card {
+        margin-top: 1.5em;
+        .menuHead {
+            font-size: 2em;   
+            color: $card-base-color;
+            margin-bottom: 0.5em;
+        }
+    }
+}
+
+.contactPage {
+    height: 55em;
+    width: 80%;
+    margin-top: 2.5em;
+}
+
+.headings {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 5em;   
+}
+
+.headingsTwo {
+    margin: 2em;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    font-weight: 700;
+    font-size: 3.5rem;   
+    text-wrap: balance;
+    text-align: center;
+}
+
+@keyframes append-animate {
+	from {
+		transform: scale(0);
+		opacity: 0;
+	}
+	to {
+		transform: scale(1);
+		opacity: 1;	
+	}
+}
